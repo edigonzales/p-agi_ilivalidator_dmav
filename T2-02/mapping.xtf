@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ili:transfer xmlns:ili="http://www.interlis.ch/xtf/2.4/INTERLIS"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:IliVRefData="http://www.interlis.ch/xtf/2.4/IliVRefData">
+    <ili:headersection>
+        <ili:models>
+            <ili:model>IliVRefData</ili:model>
+        </ili:models>
+        <ili:sender>fubar</ili:sender>
+    </ili:headersection>
+    <ili:datasection>
+        <IliVRefData:Mapping ili:bid="b1">
+            <IliVRefData:RefData ili:tid="o1">
+                <IliVRefData:ignore>false</IliVRefData:ignore>
+                <IliVRefData:topic>DMAV_FixpunkteAVKategorie3_V1_0:FixpunkteAVKategorie3</IliVRefData:topic>
+                <IliVRefData:scope>2548</IliVRefData:scope>
+                <IliVRefData:refdata>ilidata:2548.ch.so.agi.dmav.relational.toleranzstufen</IliVRefData:refdata>
+            </IliVRefData:RefData>
+        </IliVRefData:Mapping>
+    </ili:datasection>
+</ili:transfer>
