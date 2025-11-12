@@ -58,3 +58,6 @@ java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SN
 ```
 
 Läuft durch aber macht noch nix. Eventuell weil gar kein Constraint definiert ist und der Ref-Datensatz nicht benötigt wird? -> Validierungsmodell mit Existence-Constraint "TS2" bei Nummer eintragen.
+
+**Verbesserungen:**
+- Es wird  nicht gemeldet, falls scope nicht gefunden wird im mapping file.
