@@ -65,7 +65,7 @@ Läuft durch aber macht noch nix. Eventuell weil gar kein Constraint definiert i
 java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --config T202.ini --modeldir ".;https://models.interlis.ch;https://models.geo.admin.ch" /Users/stefan/Downloads/2548.ch.so.agi.dmav.relational.toleranzstufen.xtf lfp3_2548.xtf
 ```
 
-Es wird der lokale Toleranzstufen-Datensatz verwendet. Dieser wird auch geprüft (ist also so keine Referenzdatensatz). Der Fehler wird gefunden.
+Es wird der lokale Toleranzstufen-Datensatz verwendet. Dieser wird auch geprüft (ist also momentan noch kein Referenzdatensatz). Es wird korrekterweise nur ein Fehler gefunden.
 
 
 Mapping-Variante:
