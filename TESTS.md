@@ -59,7 +59,7 @@ Im Validierungsmodell wird ein Existence Constraint definiert, der prüft, ob di
 java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --modeldir "https://geo.so.ch/models;https://geo.so.ch/datahub;https://data.geo.so.ch;https://models.interlis.ch" --refmapping mapping.xtf --scope 2548 lfp3_2548.xtf
 ```
 
-Läuft durch aber macht noch nix. Eventuell weil gar kein Constraint definiert ist und der Ref-Datensatz nicht benötigt wird? -> Validierungsmodell mit Existence-Constraint "TS2" bei Nummer eintragen.
+Läuft durch aber macht noch nix. Eventuell weil gar kein Constraint definiert ist und der Ref-Datensatz nicht benötigt wird? -> Validierungsmodell mit Existence-Constraint erstellen.
 
 ```
 java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --config T202.ini --modeldir ".;https://models.interlis.ch;https://models.geo.admin.ch" /Users/stefan/Downloads/2548.ch.so.agi.dmav.relational.toleranzstufen.xtf lfp3_2548.xtf
