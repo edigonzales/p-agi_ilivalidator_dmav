@@ -88,3 +88,25 @@ java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SN
 **Beobachtungen:**
 - Es wird nicht gemeldet, falls scope nicht gefunden wird im mapping file.
 - 
+
+
+### Test: Baskets -- mandatory, optional, banned (2-03)
+
+```
+java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --mandatoryBaskets "DMAV_FixpunkteAVKategorie3_V1_0.FixpunkteAVKategorie3;DMAV_Toleranzstufen_V1_0.Toleranzstufe" lfp3_2548.xtf
+```
+
+**-> korrekte Meldung, dass Toleranzstufe fehlt**
+
+```
+java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --metaConfig mandatory_baskets_meta.ini lfp3_2548.xtf
+```
+
+**-> korrekte Meldung, dass Toleranzstufe fehlt**
+
+```
+java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --metaConfig banned_baskets_meta.ini lfp3_2548.xtf
+```
+
+**-> korrekte Meldung, dass LFP nicht vorhanden sein darf**
+
