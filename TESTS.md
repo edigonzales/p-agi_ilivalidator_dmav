@@ -29,7 +29,7 @@ Die für die Validierung notwendigen Daten liegen im lokalen Filesystem aber nic
 -> Out-of-scope.
 
 
-### Schwierigkeitsszenario 2
+### Schwierigkeitsszenario 2 (und irgendwie auch 5)
 
 Entspricht der Stufe 1, aber die für die Validierung benötigten Datensätze liegen in diversen und öffentlichen Daten-Repositories vor.
 
@@ -109,4 +109,26 @@ java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SN
 ```
 
 **-> korrekte Meldung, dass LFP nicht vorhanden sein darf**
+
+### Schwierigkeitsszenario 6 (somehow)
+
+#### Test: GWR-Funktionen (6-01)
+
+```
+java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --config T601.ini --plugins ./pluginsdir  Bodenbedeckung_Testdatensatz.xtf
+```
+
+**->Funktioniert nicht. "not yet implementet". Ich denke, es liegt daran, dass die Klassen nicht mit "IoxPlugin" enden, nur mit "Plugin".**
+
+**Wir wird sqlite jdbc bekannt gemacht?**
+
+(`java -cp '/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar:/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/libs/*' org.interlis2.validator.Main  --config T601.ini --plugins pluginsdir --trace Bodenbedeckung_Testdatensatz.xtf`)
+
+Todo: 
+- env
+
+
+
+
+java -cp '/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar:/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/libs/*' org.interlis2.validator.Main --modeldir "http://models.geo.admin.ch;." control_points.xtf
 

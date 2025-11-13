@@ -1,0 +1,28 @@
+INTERLIS 2.4;
+CONTRACTED MODEL T601 (de)
+AT "https://agi.so.ch"
+VERSION "2025-11-13"  =
+  IMPORTS DMAV_Bodenbedeckung_V1_0, IliValidGwr_V1_0, SO_FunctionsExt;
+
+  VIEW TOPIC GWR_Validierung =
+  DEPENDS ON DMAV_Bodenbedeckung_V1_0.Bodenbedeckung;
+
+    VIEW v_Bodenbedeckung
+      PROJECTION OF DMAV_Bodenbedeckung_V1_0.Bodenbedeckung.Bodenbedeckung; 
+    =
+      ALL OF Bodenbedeckung;
+    
+      !!@ name = "My_first_Bodenbedeckung_Constraint"
+      MANDATORY CONSTRAINT 2==2;
+
+      !!@ name = "My_second_Bodenbedeckung_Constraint"
+      MANDATORY CONSTRAINT IliValidGwr_V1_0.egidExistsInGWR(191956173, 5391);
+
+      !!@ name = "My_third_Bodenbedeckung_Constraint"
+      MANDATORY CONSTRAINT SO_FunctionsExt.isHttpResource("https://so.ch/foo", "");
+
+    END v_Bodenbedeckung;
+
+  END GWR_Validierung;
+
+END T601.
