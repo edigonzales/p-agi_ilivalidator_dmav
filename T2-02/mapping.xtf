@@ -9,11 +9,11 @@
         <ili:sender>fubar</ili:sender>
     </ili:headersection>
     <ili:datasection>
-        <IliVRefData:Mapping ili:bid="b1">
+        <IliVRefData:Mapping ili:bid="C9F02DF4-FF5A-4B7B-AC3E-FD9C07FB726E">
             <IliVRefData:RefData ili:tid="o1">
                 <IliVRefData:ignore>false</IliVRefData:ignore>
                 <IliVRefData:topic>DMAV_FixpunkteAVKategorie3_V1_0:FixpunkteAVKategorie3</IliVRefData:topic>
-                <IliVRefData:scope>254xxx8</IliVRefData:scope>
+                <IliVRefData:scope>2548</IliVRefData:scope>
                 <IliVRefData:refdata>ilidata:2548.ch.so.agi.dmav.relational.toleranzstufen</IliVRefData:refdata>
             </IliVRefData:RefData>
         </IliVRefData:Mapping>

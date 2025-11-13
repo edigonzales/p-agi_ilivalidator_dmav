@@ -53,11 +53,38 @@ java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SN
 
 Das Mapping wird benötigt, um einem Validierungs-Run mitzuteilen, wo für welche Gemeinde und welches Modell die notwendigen Referenzdatensätze gespeichert sind. 
 
+Im Validierungsmodell wird ein Existence Constraint definiert, der prüft, ob die `Nummer` des LFP im Attribut `NBIdent` vorkommt. Es gibt zwei LFP3 in der Datei. Für ein LFP3 ist die Bedingung erfüllt, für die andere nicht. Es muss also ein Fehler gemeldet werden.
+
 ```
 java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --modeldir "https://geo.so.ch/models;https://geo.so.ch/datahub;https://data.geo.so.ch;https://models.interlis.ch" --refmapping mapping.xtf --scope 2548 lfp3_2548.xtf
 ```
 
 Läuft durch aber macht noch nix. Eventuell weil gar kein Constraint definiert ist und der Ref-Datensatz nicht benötigt wird? -> Validierungsmodell mit Existence-Constraint "TS2" bei Nummer eintragen.
 
-**Verbesserungen:**
-- Es wird  nicht gemeldet, falls scope nicht gefunden wird im mapping file.
+```
+java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --config T202.ini --modeldir ".;https://models.interlis.ch;https://models.geo.admin.ch" /Users/stefan/Downloads/2548.ch.so.agi.dmav.relational.toleranzstufen.xtf lfp3_2548.xtf
+```
+
+Es wird der lokale Toleranzstufen-Datensatz verwendet. Dieser wird auch geprüft (ist also so keine Referenzdatensatz). Der Fehler wird gefunden.
+
+
+Mapping-Variante:
+```
+java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --modeldir ".;https://geo.so.ch/models;https://geo.so.ch/datahub;https://data.geo.so.ch;https://models.interlis.ch" --config T202.ini --refmapping mapping.xtf --scope 2548 lfp3_2548.xtf
+```
+
+**-> Scheint nicht zu funktionieren. Es werden zwei Fehler gemeldet.**
+
+
+Direkte Variante: 
+```
+-java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --modeldir ".;https://geo.so.ch/models;https://geo.so.ch/datahub;https://data.geo.so.ch;https://models.interlis.ch" --config T202.ini --refdata ilidata:2548.ch.so.agi.dmav.relational.toleranzstufen --allObjectsAccessible lfp3_2548.xtf
+```
+
+**-> Scheint nicht zu funktionieren. Es werden zwei Fehler gemeldet.**
+
+
+
+**Beobachtungen:**
+- Es wird nicht gemeldet, falls scope nicht gefunden wird im mapping file.
+- 

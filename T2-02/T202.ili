@@ -1,0 +1,24 @@
+INTERLIS 2.4;
+CONTRACTED MODEL T202 (de)
+AT "https://agi.so.ch"
+VERSION "2025-11-13"  =
+  IMPORTS DMAV_FixpunkteAVKategorie3_V1_0, DMAV_Toleranzstufen_V1_0;
+
+  VIEW TOPIC LFP3_Validierung =
+  DEPENDS ON DMAV_FixpunkteAVKategorie3_V1_0.FixpunkteAVKategorie3, DMAV_Toleranzstufen_V1_0.Toleranzstufen;
+
+    VIEW v_LFP3
+      PROJECTION OF DMAV_FixpunkteAVKategorie3_V1_0.FixpunkteAVKategorie3.LFP3; 
+    =
+      ALL OF LFP3;
+      !!@ name = "My_first_LFP3_Constraint"
+      MANDATORY CONSTRAINT 2==2;
+
+      !!@ name = "My_second_LFP3_Constraint"
+      EXISTENCE CONSTRAINT Nummer REQUIRED IN DMAV_Toleranzstufen_V1_0.Toleranzstufen.Toleranzstufe:NBIdent;  
+
+    END v_LFP3;
+
+  END LFP3_Validierung;
+
+END T202.
