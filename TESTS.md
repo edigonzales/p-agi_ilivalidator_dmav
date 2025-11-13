@@ -70,7 +70,7 @@ Es wird der lokale Toleranzstufen-Datensatz verwendet. Dieser wird auch geprüft
 
 Mapping-Variante:
 ```
-java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --modeldir ".;https://geo.so.ch/models;https://geo.so.ch/datahub;https://data.geo.so.ch;https://models.interlis.ch" --config T202.ini --refmapping mapping.xtf --scope 2548 lfp3_2548.xtf
+java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --modeldir ".;https://geo.so.ch/models;https://geo.so.ch/datahub;https://data.geo.so.ch;https://models.interlis.ch" --config T202.ini --refmapping mapping.xtf --scope 2548 --allObjectsAccessible lfp3_2548.xtf
 ```
 
 **-> Scheint nicht zu funktionieren. Es werden zwei Fehler gemeldet.**
@@ -78,7 +78,7 @@ java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SN
 
 Direkte Variante: 
 ```
--java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --modeldir ".;https://geo.so.ch/models;https://geo.so.ch/datahub;https://data.geo.so.ch;https://models.interlis.ch" --config T202.ini --refdata ilidata:2548.ch.so.agi.dmav.relational.toleranzstufen --allObjectsAccessible lfp3_2548.xtf
+java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar --modeldir ".;https://geo.so.ch/models;https://geo.so.ch/datahub;https://data.geo.so.ch;https://models.interlis.ch" --config T202.ini --refdata ilidata:2548.ch.so.agi.dmav.relational.toleranzstufen --allObjectsAccessible lfp3_2548.xtf
 ```
 
 **-> Scheint nicht zu funktionieren. Es werden zwei Fehler gemeldet.**
