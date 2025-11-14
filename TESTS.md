@@ -122,7 +122,7 @@ java -jar /Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SN
 
 **Wir wird sqlite jdbc bekannt gemacht?**
 
-(`java -cp '/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar:/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/libs/*' org.interlis2.validator.Main  --config T601.ini --plugins pluginsdir --trace Bodenbedeckung_Testdatensatz.xtf`)
+(`java -cp '/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar:/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/libs/*' org.interlis2.validator.Main --config T601.ini --plugins pluginsdir --trace Bodenbedeckung_Testdatensatz.xtf`)
 
 Todo: 
 - env
@@ -130,5 +130,5 @@ Todo:
 
 
 
-java -cp '/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar:/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/libs/*' org.interlis2.validator.Main --modeldir "http://models.geo.admin.ch;." control_points.xtf
+java -cp '/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/ilivalidator-1.15.0-SNAPSHOT.jar:/Users/stefan/apps/ilivalidator-1.15.0-SNAPSHOT/libs/*' org.interlis2.validator.Main --config T601.ini --modeldir "http://models.geo.admin.ch;." Bodenbedeckung_Testdatensatz.xtf
 
